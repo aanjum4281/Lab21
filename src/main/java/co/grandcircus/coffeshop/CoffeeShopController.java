@@ -31,16 +31,29 @@ public class CoffeeShopController {
 			@RequestParam("last") String last,
 			@RequestParam("email") String email,
 			@RequestParam("phone") String phone,
-			@RequestParam("password") String password){
+			@RequestParam("password") String password,
+			@RequestParam("age") String age,
+			@RequestParam("date") String date ,
+			@RequestParam("username") String username ){
+		
+		//Construct a user from the url params
+		User user = new User();
+		user.setFirst(first);
+		user.setLast(last);
+		user.setPhone(phone);
+		user.setEmail(email);
+		user.setPassword(password);
+		user.setAge(age);
+		user.setDate(date);
+		user.setUsername(username);
+		
+		
 		
 		// `story` matches the name of the JSP file
 		ModelAndView mav = new ModelAndView("summary");
 		// `word1` matches `${ word1 } in the JSP
-		mav.addObject("word1", first);
-		mav.addObject("word2", last);
-		mav.addObject("word3", email);
-		mav.addObject("word4", phone);
-		mav.addObject("word5", password);
+		mav.addObject("user" , user);
+	
 		return mav;
 	}
 	
