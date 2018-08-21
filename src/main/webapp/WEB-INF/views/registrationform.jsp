@@ -28,8 +28,8 @@
 			      <div>
 			     <h1> Registration 
 			      </h1>
-			      <h1> <img src="images/register.jpg"> </h1>
-			    
+			      <h3> <img src="images/register.jpg"> </h3>
+		<div> 	    
 		<p> First name: <input name="first" minlength="2" required/> </p>
 		<p> Last name: <input name="last" required/> </p>
 		<p> Email: <input type= "email" name="email" required/> </p>
@@ -38,7 +38,7 @@
 		<p> Password: <input type= "password" name="password" required/> </p>
 		<p> Age: <input type="number" name="age"  min="18" max="100" required/> </p>
 		<p> Today's date: <input type="date" name="date" required/> </p> 
-		
+		</div>
 		<p>
 			<!-- Clicking a button will submit the form. -->
 			<button type="submit" class="btn-btn-primary mb-2"> Register!</button>

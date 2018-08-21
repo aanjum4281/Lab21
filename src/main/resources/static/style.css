@@ -4,10 +4,15 @@ h1{
 	
 }
 h2 img {
-	 height: 500px;
-    width: 500px;
+	 height: 400px;
+    width: 600px;
+}
+h3 img {
+	height: 300px;
+	width: 600px;
+	background-color:lightblue;
 }
 div {
 	text-align: center;
-	
+	style="background-color:lightblue"
 }
