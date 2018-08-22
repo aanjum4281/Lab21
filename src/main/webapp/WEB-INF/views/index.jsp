@@ -33,7 +33,7 @@
                 </c:forEach>
             </tbody>
         </table>
-        | ${items } |
+     
     
                
 			

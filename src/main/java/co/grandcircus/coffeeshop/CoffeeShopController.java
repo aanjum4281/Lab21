@@ -24,14 +24,13 @@ public class CoffeeShopController {
 	@RequestMapping("/")
 	public ModelAndView showHomePage() {
 		ModelAndView mav = new ModelAndView("index");
+		List<Items> items = itemsDao.findAll();
 		mav.addObject("first", "Amna");
 		mav.addObject("last", "Anjum ");
-		List<Items> items = itemsDao.findAll();
+		mav.addObject("items", items);
+	
 		// Always return a ModelAndView
 		return mav;
-		
-		
-		
 		
 		
 //		ModelAndView mav = new ModelAndView("index");
