@@ -1,22 +1,47 @@
-package co.grandcircus.coffeshop;
+package co.grandcircus.coffeeshop;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import co.grandcircus.coffeeshop.dao.UserDao;
+import co.grandcircus.coffeeshop.dao.ItemsDao;
+
+
 @Controller
 public class CoffeeShopController {
+	
+	@Autowired
+	private UserDao userDao;
+	
+	@Autowired
+	private ItemsDao itemsDao;
+	
 	@RequestMapping("/")
 	public ModelAndView showHomePage() {
 		ModelAndView mav = new ModelAndView("index");
 		mav.addObject("first", "Amna");
 		mav.addObject("last", "Anjum ");
+		List<Items> items = itemsDao.findAll();
 		// Always return a ModelAndView
 		return mav;
+		
+		
+		
+		
+		
+//		ModelAndView mav = new ModelAndView("index");
+//		List<Items> items = itemsDao.findAll();
+//		return new ModelAndView("items", "items", items);
+//		
+		// Always return a ModelAndView
+
 	}
 	
-	// This controller is accessed at localhost:8080/madlib-form
 	@RequestMapping("/registration-form")
 	public ModelAndView showForm() {
 		// The new ModelAndView indicates what JSP to render
@@ -46,15 +71,16 @@ public class CoffeeShopController {
 		user.setAge(age);
 		user.setDate(date);
 		user.setUsername(username);
+				
+		userDao.create(user);
 		
+		ModelAndView mav = new ModelAndView("redirect:/");
+		mav.addObject("user", user);
 		
-		
-		// `story` matches the name of the JSP file
-		ModelAndView mav = new ModelAndView("summary");
-		// `word1` matches `${ word1 } in the JSP
-		mav.addObject("user" , user);
-	
 		return mav;
+
 	}
+	
+	
 	
 }

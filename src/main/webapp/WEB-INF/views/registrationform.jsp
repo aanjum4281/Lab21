@@ -42,7 +42,7 @@
 		<p>
 			<!-- Clicking a button will submit the form. -->
 			<button type="submit" class="btn-btn-primary mb-2"> Register!</button>
-			<button type="clear" class="btn-btn-secondary mb-2"> clear</button>
+			<!-- <button type="clear" class="btn-btn-secondary mb-2"> clear</button> -->
 			
 		</p>
 		

@@ -9,6 +9,7 @@
 </head>
 <body>
 <div>
+
 	<h1>Confirmation</h1>
 	<h2> <img src="images/tick-305245_960_720.png"> </h2>
 	<p>
@@ -17,6 +18,7 @@
 	<p> Your username is ${ user.username } </p>
 	
 	<a href="/registration-form">Back to Registration</a>
+	 
 </div>
 </body>
 </html>

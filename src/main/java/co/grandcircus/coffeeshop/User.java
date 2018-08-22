@@ -1,4 +1,4 @@
-package co.grandcircus.coffeshop;
+package co.grandcircus.coffeeshop;
 
 public class User {
 	private String first;
@@ -8,7 +8,7 @@ public class User {
 	private String password;
 	private String age;
 	private String date;
-	private Object username;
+	private String username;
 	
 	public User () {}
 	
@@ -30,7 +30,7 @@ public class User {
 		return username;
 	}
 
-	public void setUsername(Object username) {
+	public void setUsername(String username) {
 		this.username = username;
 	}
 
