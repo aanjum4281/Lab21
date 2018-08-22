@@ -73,7 +73,7 @@ public class CoffeeShopController {
 				
 		userDao.create(user);
 		
-		ModelAndView mav = new ModelAndView("redirect:/");
+		ModelAndView mav = new ModelAndView("/summary");
 		mav.addObject("user", user);
 		
 		return mav;
