@@ -1,15 +1,18 @@
 package co.grandcircus.coffeeshop;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import co.grandcircus.coffeeshop.dao.UserDao;
+
 import co.grandcircus.coffeeshop.dao.ItemsDao;
 
 
@@ -118,17 +121,21 @@ public class CoffeeShopController {
 		
 	}
 	
-//	@RequestMapping("/admin-form")
-//	public ModelAndView delete(@PathVariable("id") Long id) {
-//		itemsDao.delete(id);
-//		return new ModelAndView("redirect:/");
-//	}
-	
-//	@RequestMapping("/admin-form")
-//	public ModelAndView delete(@PathVariable("id") Long id) {
-//		itemsRepo.deleteById(id);
-//		return new ModelAndView("redirect:/");
-//	}
+	// same URL but different method
+	//edit item
+//		@RequestMapping(value="/add-item/{id}/update", method=RequestMethod.POST)
+//		public ModelAndView submitEditForm(Items items, @PathVariable("id") Long id) {
+//			items.setId(id);
+//			itemsDao.update(items);
+//			return new ModelAndView("redirect:/add-form");
+//		}
+		
+		//delete item
+		@RequestMapping("/add-item/delete")
+		public ModelAndView delete(@PathVariable("id") Long id) {
+			itemsDao.delete(id);
+			return new ModelAndView("redirect:/");
+		}
 	
 	
 }

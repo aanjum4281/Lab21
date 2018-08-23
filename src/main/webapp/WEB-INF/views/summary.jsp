@@ -18,6 +18,7 @@
 	<p> Your username is ${ user.username } </p>
 	
 	<a href="/registration-form">Back to Registration</a>
+	<a href="/">Back to Home</a>
 	 
 </div>
 </body>

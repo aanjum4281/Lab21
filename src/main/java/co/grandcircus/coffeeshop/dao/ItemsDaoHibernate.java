@@ -14,6 +14,7 @@ import co.grandcircus.coffeeshop.Items;
 
 
 
+
 @Repository
 @Transactional
 public class ItemsDaoHibernate {
@@ -39,6 +40,10 @@ public class ItemsDaoHibernate {
 	public void delete(Long id) {
 		Items items = em.getReference(Items.class, id);
 		em.remove(items);
+	}
+	
+	public void update(Items items) {
+		em.merge(items);
 	}
 	
 	
