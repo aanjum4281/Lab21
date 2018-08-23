@@ -100,7 +100,7 @@ public class CoffeeShopController {
 	
 	@RequestMapping("/add")
 	public ModelAndView showNew(
-			@RequestParam("id") Long id,
+		
 			@RequestParam("name") String name,
 			@RequestParam("description") String description,
 			@RequestParam("quantity") String quantity,
@@ -108,7 +108,7 @@ public class CoffeeShopController {
 		
 		Items items = new Items();
 
-		items.setId(id);
+		
 		items.setName(name);
 		items.setDescription(description);
 		items.setQuantity(quantity);

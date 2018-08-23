@@ -24,7 +24,7 @@
 			      </h1>
 			      
 		<div> 	    
-		<p> ID: <input name="id" required/> </p>
+		
 		<p> Name: <input name="name" required/> </p>
 		<p> Description: <input name= "description" required/> </p>
 		<p> Quantity: <input name= "quantity" required/> </p>
