@@ -29,7 +29,8 @@
                     <td>${items.price}</td>
                     <td>
 						<a href="/" ${ items.id }/update" class="btn btn-light btn-sm">Edit</a>
-						<a href="/delete?id=${items.id }" class="btn btn-light btn-sm">Delete</a>
+						<a href="/delete?id=${items.id }" class="btn btn-light btn-sm" onclick= "return confirm('are you sure?')">Delete</a>
+						
 					</td>
                 </tr>
                
@@ -38,6 +39,7 @@
         </table>
 	
 	<p> <a href="/add-item">Add an Item</a>  </p>
+	<p> <a href="/">Back to Home</a> </p>
 	
 	
 	</form>

@@ -13,7 +13,7 @@
 	<h1>Confirmation</h1>
 	<h2> <img src="images/tick-305245_960_720.png"> </h2>
 	<p>
-	Congratulations ${ user.first } ${ user.last }! You are now registered!
+	Congratulations ${ user.first } ${ user.last }! YOU DID IT!
 	</p>
 	<p> Your username is ${ user.username } </p>
 	
