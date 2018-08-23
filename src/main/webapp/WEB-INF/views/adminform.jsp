@@ -24,8 +24,8 @@
                     <td>${items.id} </td><td>${items.name}</td><td>${items.description}</td><td>${items.quantity}</td>
                     <td>${items.price}</td>
                     <td>
-						<a href="/admin-form ${ items.id }/update" class="btn btn-light btn-sm">Edit</a>
-						<a href="/admin-form ${ items.id }/delete" class="btn btn-light btn-sm">Delete</a>
+						<%-- <a href="/" ${ items.id }/update" class="btn btn-light btn-sm">Edit</a> --%>
+						<a href="/delete?id=${items.id }" class="btn btn-light btn-sm">Delete</a>
 					</td>
                 </tr>
                

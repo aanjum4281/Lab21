@@ -5,25 +5,26 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import co.grandcircus.coffeeshop.dao.UserDao;
 
-import co.grandcircus.coffeeshop.dao.ItemsDao;
+import co.grandcircus.coffeeshop.dao.UserDaoHibernate;
+
+import co.grandcircus.coffeeshop.dao.ItemsDaoHibernate;
 
 
 @Controller
 public class CoffeeShopController {
 	
 	@Autowired
-	private UserDao userDao;
+	private UserDaoHibernate userDao;
 	
 	@Autowired
-	private ItemsDao itemsDao;
+	private ItemsDaoHibernate itemsDao;
 	
 	@RequestMapping("/")
 	public ModelAndView showHomePage() {
@@ -99,7 +100,7 @@ public class CoffeeShopController {
 	
 	@RequestMapping("/add")
 	public ModelAndView showNew(
-			@RequestParam("id") String id,
+			@RequestParam("id") Long id,
 			@RequestParam("name") String name,
 			@RequestParam("description") String description,
 			@RequestParam("quantity") String quantity,
@@ -131,8 +132,8 @@ public class CoffeeShopController {
 //		}
 		
 		//delete item
-		@RequestMapping("/add-item/delete")
-		public ModelAndView delete(@PathVariable("id") Long id) {
+		@RequestMapping("/delete")
+		public ModelAndView delete(@RequestParam("id") Long id) {
 			itemsDao.delete(id);
 			return new ModelAndView("redirect:/");
 		}
