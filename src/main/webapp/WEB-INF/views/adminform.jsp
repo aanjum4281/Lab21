@@ -28,7 +28,7 @@
                     <td>${items.id} </td><td>${items.name}</td><td>${items.description}</td><td>${items.quantity}</td>
                     <td>${items.price}</td>
                     <td>
-						<a href="/" ${ items.id }/update" class="btn btn-light btn-sm">Edit</a>
+						<a href="/update-item?id=${ items.id }" class="btn btn-light btn-sm">Edit</a>
 						<a href="/delete?id=${items.id }" class="btn btn-light btn-sm" onclick= "return confirm('are you sure?')">Delete</a>
 						
 					</td>

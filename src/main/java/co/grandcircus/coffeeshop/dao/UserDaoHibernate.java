@@ -34,7 +34,7 @@ public class UserDaoHibernate {
 	}
 	
 	public void create(User user) {
-		em.persist(user);
+		em.merge(user);
 	}
 	
 	public void delete(Long id) {
